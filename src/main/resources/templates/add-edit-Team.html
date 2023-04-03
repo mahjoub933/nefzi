@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <title>Update Teams</title>
+    <meta charset="ISO-8859-1">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" />
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="col-md-10">
+           <form action="#" th:action="@{/addTeam}" th:object="${team}" method="post">
+               <div class="row">
+                   <div class="form-group col-md-8">
+                       <label for="name" class="col-from-label">Name</label>
+                       <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="your name" />
+                   </div>
+                   <div class="form-group col-md-8">
+                       <label for="description" class="col-from-label">Description</label>
+                       <input type="text" th:field="*{description}" class="form-control" id="description" placeholder="your description" />
+                   </div>
+                   <div class="form-group col-md-8">
+                       <label for="result" class="col-from-label">Result</label>
+                       <input type="text" th:field="*{result}" class="form-control" id="result" placeholder="your result" />
+                   </div>
+                   <div class="col-md-6">
+                       <input type="submit" class="btn btn-primary" value="submit">
+                   </div>
+                   <input type="hidden" id="id" th:field="*{id}" />
+               </div>
+           </form>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>
